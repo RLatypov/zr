@@ -1,0 +1,25 @@
+.block-main-menu {
+  text-align: center;
+  > ul,
+  .item {
+    display: inline-block;
+  }
+  .link {
+    display: block;
+    text-decoration: none;
+    padding: 0 9px;
+    font-size: 18px;
+    border-bottom: none;
+    line-height: 43px;
+    @include transition(background-color .15s);
+    &:hover .text {
+      @include header-link-hover;
+    }
+  }
+  .text {
+    @include header-link(solid);
+    font-family: $secondary-font;
+    display: inline-block;
+    line-height: 1;
+  }
+}

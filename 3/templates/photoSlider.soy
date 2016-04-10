@@ -1,0 +1,28 @@
+{namespace zr.slider}
+
+/**
+ * Slider images
+ * @param id String id slider.
+ * @param images List of images.
+ */
+{template .slider}
+    <div id="{$id}" class="{css slider-container}">
+        <div class="{css slider-wrapper}">
+            {foreach $image in $images}
+                <div data-slide-index="{index($image)}" class="{css slider-slide}{if isFirst($image)} {css first}{/if}{if isLast($image)} {css last}{/if}">
+                    <img alt="" title="" src="{$image}" />
+                </div>
+            {/foreach}
+        </div>
+        <span class="{css slider-hide}">X</span>
+    </div>
+{/template}
+
+/**
+ * Slider show
+ * @param id String id slider
+ * @param text String text button
+ */
+{template .sliderShow}
+    <button data-slider="{$id}" class="{css slider-show}">{$text}</button>
+{/template}

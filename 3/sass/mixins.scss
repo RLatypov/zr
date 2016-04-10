@@ -1,0 +1,31 @@
+@mixin img-responsive() {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin box-sizing($box-sizing) {
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing:    $box-sizing;
+  box-sizing:         $box-sizing;
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+@mixin transform($transforms) {
+  -moz-transform:     $transforms;
+  -o-transform:       $transforms;
+  -ms-transform:      $transforms;
+  -webkit-transform:  $transforms;
+  transform:          $transforms;
+}

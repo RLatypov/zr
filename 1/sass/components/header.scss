@@ -1,0 +1,186 @@
+.header {
+  height: 150px;
+  background: url(../img/head-pattern.png) repeat-x;
+  position: relative;
+  z-index: 1;
+  .top-header {
+    padding: 25px 40px 9px 20px;
+    position: relative;
+    .col-1 {
+      position: absolute;
+      left: 50px;
+      top: 30px;
+    }
+    .col-2 {
+      max-width: 411px;
+      margin: 0 auto;
+    }
+    .col-3 {
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+  }
+  .bottom-header {
+    position: relative;
+    .col-1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .col-3 {
+      width: 16%;
+      position: absolute;
+      right: 12px;
+      bottom: 2px;
+    }
+  }
+  .block-user {
+    color: $secondary-color;
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .photo {
+      @include size(50px,50px);
+      margin-right: 12px;
+      img {
+        border-radius: 50%;
+        @include img-responsive();
+      }
+    }
+    .name {
+      cursor: pointer;
+      span {
+        @include header-link(dotted);
+      }
+      &:hover span {
+        @include header-link-hover;
+      }
+    }
+    .count {
+      @include transform(skewX(-10deg));
+      background-color: $primary-color;
+      padding: 2px 3px;
+      vertical-align: top;
+      margin-top: 5px;
+      font-size: 10px;
+      font-family: $secondary-font;
+      font-weight: bold;
+      line-height: 100%;
+    }
+  }
+  .block-logo {
+    text-align: center;
+  }
+  .block-sitemap {
+    background-color: $primary-color;
+    position: relative;
+    margin: -3px 9px -5px 0;
+    outline: 0;
+    padding: 14px 15px 12px;
+    &:after {
+      @include size(0,0);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      border-top: 51px solid $primary-color;
+      border-right: 7px solid transparent;
+    }
+    .sitemap-button {
+      @include size(110px,25px);
+      @include box-sizing(border-box);
+      color: $secondary-color;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 1px 0 0 26px;
+      font-size: 18px;
+      font-family: $secondary-font;
+      display: block;
+      background-position: -64px -62px;
+      span {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+      }
+      &:before {
+        @include size(20px,25px);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../img/sprites.png) no-repeat 0 -1128px;
+      }
+    }
+  }
+}
+
+.block-top-menu {
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    color: $secondary-color;
+    a {
+      text-decoration: none;
+      span {
+        @include header-link(solid);
+      }
+      &:hover span {
+        @include header-link-hover;
+      }
+    }
+    &.active {
+        @include transform(skewX(-10deg));
+        display: inline-block;
+        padding: 7px 14px;
+        background-color: $primary-color;
+        span {
+          @include transform(skewX(10deg));
+          display: inline-block;
+          border: 0;
+        }
+    }
+  }
+}
+
+.block-header-search {
+  line-height: 40px;
+  height: 40px;
+  position: relative;
+  input {
+    @include box-sizing(border-box);
+    width: 100%;
+    padding: 5px 30px 5px 15px;
+    border: 1px solid #212121;
+    background-color: transparent;
+    outline: 0;
+    margin: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: 18px;
+    color: #8b8b8b;
+  }
+  button {
+    @include size(30px,26px);
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    margin-top: -13px;
+    border: none;
+    background-color: transparent;
+    text-indent: 9999em;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: .5;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -7px 0 0 -7px;
+      @include size(14px,14px);
+      background: url(../img/sprites.png) no-repeat 0 -958px;
+    }
+  }
+}

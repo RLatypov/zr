@@ -1,0 +1,26 @@
+.page {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 980px;
+  padding-bottom: 30px;
+}
+
+.content {
+  padding: 0 0 0 10%;
+  .content-inner {
+    padding-right: 20px;
+  }
+}
+
+.row {
+  > section {
+    float: left;
+    @include box-sizing(border-box);
+  }
+  .col-8 {
+    width: 68%;
+  }
+  .col-4 {
+    width: 32%;
+  }
+}

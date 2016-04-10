@@ -1,0 +1,77 @@
+.block-content-promo {
+  .item {
+    @include box-sizing(border-box);
+    display: inline-block;
+    float: left;
+    width: 31%;
+    padding: 10px;
+    margin-left: 18px;
+    color: $secondary-color;
+    background-color: $red-color;
+    &:first-child {
+      margin-left: 0;
+    }
+    .number {
+      font-size: 48px;
+      line-height: 48px;
+      position: absolute;
+      font-weight: bold;
+    }
+    .item-inner {
+      margin-left: 40px;
+      font-family: $secondary-font;
+    }
+  }
+}
+
+.block-info-1 {
+  margin-top: -55px;
+  font-family: $secondary-font;
+  img {
+    position: relative;
+    width: 62%;
+    right: -10%;
+  }
+  .text {
+    left: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    top: -40px;
+    padding-left: 10%;
+    span {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 4px;
+      color: $red-color;
+    }
+  }
+}
+
+.block-info-2 {
+  position: relative;
+  font-family: $secondary-font;
+  header {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 10%;
+    > span {
+      font-size: 30px;
+      color: $red-color;
+      > span {
+        font-size: 18px;
+      }
+    }
+  }
+  img {
+    margin-top: -70px;
+  }
+  footer {
+    background-color: $red-color;
+    color: $secondary-color;
+    text-align: right;
+    padding: 10px 40px;
+    margin-top: -11px;
+  }
+}

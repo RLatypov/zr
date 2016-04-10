@@ -1,0 +1,47 @@
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin transform($transforms) {
+  -moz-transform:     $transforms;
+  -o-transform:       $transforms;
+  -ms-transform:      $transforms;
+  -webkit-transform:  $transforms;
+  transform:          $transforms;
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+@mixin img-responsive() {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin header-link($border-style) {
+  @include transition(color .2s,border-bottom-color .2s);
+  color: $secondary-color;
+  border-bottom: 1px $border-style rgba(255,255,255,.3);
+}
+
+@mixin header-link-hover() {
+  @include transition(color 0s,border-bottom-color 0s);
+  color: $primary-color;
+  border-bottom-color: rgba(228,0,37,.3);
+}
+
+@mixin text-shadow($text-shadow) {
+  text-shadow: $text-shadow;
+}

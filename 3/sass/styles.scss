@@ -1,0 +1,57 @@
+@import 'mixins';
+@import 'normalize';
+
+* {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  @include size(100%,100%);
+}
+
+#slider-small {
+  @include size(500px,350px);
+}
+
+#slider-large {
+  @include size(100%,auto);
+}
+
+.slider-container {
+  overflow: hidden;
+  position: absolute;
+  display: none;
+  background-color: grey;
+  left: 0;
+  top: 0;
+  &.show {
+    display: block;
+  }
+  .slider-wrapper {
+    @include size(100%,100%);
+    @include transition(transform 0.3s ease-out);
+    @include transform(0);
+  }
+  .slider-slide {
+    @include size(100%,100%);
+    @include transform(0);
+    float: left;
+    text-align: center;
+    padding: 50px;
+    img {
+      @include img-responsive;
+    }
+  }
+  .slider-hide {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    color: white;
+  }
+}
+
+.slider-show {
+  margin: 10px;
+}
